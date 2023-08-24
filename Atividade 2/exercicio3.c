@@ -4,10 +4,10 @@
 int busca_string(char *array[], int tamanho, char *busca) {
     for (int i = 0; i < tamanho; i++) {
         if (strcmp(array[i], busca) == 0) {
-            return 1; // Encontrou a string de busca no array
+            return 1; /
         }
     }
-    return 0; // Não encontrou a string de busca no array
+    return 0; 
 }
 
 int main() {

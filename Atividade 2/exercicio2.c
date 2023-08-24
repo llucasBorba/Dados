@@ -2,12 +2,11 @@
 
 void encontrarMinMax(int array[], int tamanho, int *menor, int *maior) {
     if (tamanho <= 0) {
-        // Caso especial: array vazio ou tamanho inválido
         *menor = *maior = 0;
         return;
     }
 
-    *menor = *maior = array[0];  // Inicializa menor e maior com o primeiro elemento
+    *menor = *maior = array[0];  
 
     for (int i = 1; i < tamanho; i++) {
         if (array[i] < *menor) {
