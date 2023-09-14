@@ -7,7 +7,6 @@ int main(int argc, char *argv[]) {
         printf("Uso: %s arquivo_de_entrada.txt\n", argv[0]);
         return 1;
     }
-
     char *nomeArquivoEntrada = argv[1];
     char nomeArquivoSaida[100];
     snprintf(nomeArquivoSaida, sizeof(nomeArquivoSaida), "%s_ordenado.txt", nomeArquivoEntrada);
@@ -27,7 +26,8 @@ int main(int argc, char *argv[]) {
     fseek(arquivoEntrada, 0, SEEK_SET);
 
     char **palavras = malloc(numPalavras * sizeof(char *));
-    for (int i = 0; i < numPalavras; i++) {
+    int i;
+    for (i = 0; i < numPalavras; i++) {
         palavras[i] = malloc(100 * sizeof(char));
         fscanf(arquivoEntrada, "%s", palavras[i]);
     }
@@ -42,13 +42,13 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    for (int i = 0; i < numPalavras; i++) {
+    for (i = 0; i < numPalavras; i++) {
         fprintf(arquivoSaida, "%s\n", palavras[i]);
     }
 
     fclose(arquivoSaida);
 
-    for (int i = 0; i < numPalavras; i++) {
+    for (i = 0; i < numPalavras; i++) {
         free(palavras[i]);
     }
     free(palavras);

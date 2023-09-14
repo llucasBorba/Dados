@@ -10,8 +10,9 @@ void trocar(char **str1, char **str2) {
 }
 
 void ordenacaoBolha(char *arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
+    int i, j;
+    for (i = 0; i < n - 1; i++) {
+        for (j = 0; j < n - i - 1; j++) {
             if (strcmp(arr[j], arr[j + 1]) > 0) {
                 trocar(&arr[j], &arr[j + 1]);
             }
