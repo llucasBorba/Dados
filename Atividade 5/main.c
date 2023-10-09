@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ordenacao_bolha.h"
+#include "bubble_sort.h"
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
